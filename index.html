@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Guardian Meme Generator</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="resources/jquery-ui.min.css">
+    <link rel="stylesheet" href="resources/bootstrap.css">
+    <link rel="stylesheet" href="resources/lity.css">
+    <link rel="stylesheet" href="resources/beta.css">
+    <link rel="stylesheet" href="resources/fonts.css">
+
+    <script src="resources/jquery.min.js"></script>
+    <script src="resources/jquery-ui.min.js"></script>
+    <script src="resources/bootstrap.js"></script>
+    <script src="resources/html2canvas.1.0.0.rc3.js"></script>
+    <script src="resources/lity.js"></script>
+    <script src="resources/FileSaver.138.js"></script>
+
+</head>
+
+<body>
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12">
+
+                    <div class="alert alert-info center-text alert-dismissible ie_warning">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                        <strong>
+                            This site does not support Internet Explorer or Microsoft Edge due to a lack of the necessary features required
+                            <br>
+                            <br>
+                            Please use a decent browser. Think of the kittens
+                        </strong>
+                    </div>
+
+                    <!-- meme-bg-target -->
+                    <div id="meme-bg-target">
+                        <div class="wrap">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12">
+                                    <div class="top-container">
+                                        <div class="top-element">
+                                            <div placeholder="Click here to type your meme" contenteditable="true" class="meme-txt-area" id="meme-txt-area"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12">
+                                    <div class="bottom-container">
+                                        <div class="bottom-element">
+                                            <div class="meme-name-area">Owen Jones</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="photo">
+                            <img src="images/mugshots/owenjones.png" crossorigin="anonymous">
+                        </div>
+                    </div>
+                    <!-- End meme-bg-target -->
+                    <!-- meme-control -->
+                    <div class="row text-center">
+                        <div class="col-xs-12 col-sm-12 col-md-2 center-text">
+                            <!-- font size / download row -->
+                            <div class="btn-group btn-group-xs btn-group-sm">
+                                <div class="col-xs-4 col-sm-4 col-md-8">
+                                    <div class="btn-group btn-group-md">
+                                        <!--                    <p class="h4">Save</p>-->
+                                        <button type="button" name="save-as-image" id="save-as-image" class="btn btn-primary">Download Meme</button>
+                                    </div>
+                                </div>
+                                <div class="col-xs-8 col-sm-8 col-md-8">
+                                    <p class="h4">Font Size</p>
+                                    <button type="button" value="Smaller" class="btn btn-primary qtyminus">Smaller</button>
+                                    <button type="button" value="Larger" class="btn btn-primary qtyplus">Larger</button>
+                                    <p>
+                                        Hide Text Box
+                                        <input type="checkbox" id="hide">
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end of font size / download row -->
+
+                        <div class="col-xs-12 col-sm-12 col-md-8">
+                            <!-- Names row -->
+                            <div class="btn-group btn-group-md">
+
+                                <p class="h4">Guardian Hacks</p>
+
+                                <button type="button" class="btn btn-primary name" name="Owen Jones" value="owenjones">The Boy Jones</button>
+                                <button type="button" class="btn btn-primary name" name="Abi Wilkinson" value="abiwilkinson">Abi Wilkinson</button>
+                                <button type="button" class="btn btn-primary name" name="Afua Hirsch" value="afuahirsch">Afua Hirsch</button>
+                                <button type="button" class="btn btn-primary name name-red" name="Andrew Rawnsley" value="andrewrawnsley">Andrew Rawnsley</button>
+                                <button type="button" class="btn btn-primary name" name="Arwa Mahdawi" value="arwamahdawi">Arwa Mahdawi</button>
+                                <button type="button" class="btn btn-primary name" name="Bonnie Greer" value="bonniegreer">Bonnie Greer</button>
+                                <button type="button" class="btn btn-primary name" name="Carole Cadwalladr" value="carolecadwalladr">Carole Cadwalladr</button>
+                                <button type="button" class="btn btn-primary name" name="Caroline Criado-Perez" value="carolinecriadoperez">Caroline Criado-Perez</button>
+                                <button type="button" class="btn btn-primary name name-red" name="David Mitchell" value="davidmitchell">David Mitchell</button>
+                                <button type="button" class="btn btn-primary name name-red" name="Eleanor Ainge Roy" value="eleanoraingeroy">Eleanor Ainge Roy</button>
+                                <button type="button" class="btn btn-primary name" name="Faiza Shaheen" value="faizashaheen">Faiza Shaheen</button>
+                                <button type="button" class="btn btn-primary name" name="Gaby Hinsliff" value="gabyhinsliff">Gaby Hinsliff</button>
+                                <button type="button" class="btn btn-primary name" name="Gary Younge" value="garyyounge">Gary Younge</button>
+                                <button type="button" class="btn btn-primary name" name="George Monbiot" value="georgemonbiot">George Monbiot</button>
+                                <button type="button" class="btn btn-primary name name-red" name="Hadley Freeman" value="hadleyfreeman">Hadley Freeman</button>
+                                <button type="button" class="btn btn-primary name" name="Jessica Valenti" value="jessicavalenti">Jessica Valenti</button>
+                                <button type="button" class="btn btn-primary name name-red" name="Jonathan Freedland" value="jonathanfreedland">Jonathan Freedland</button>
+                                <button type="button" class="btn btn-primary name" name="Jon Snow" value="jonsnow">Jon Snow</button>
+                                <button type="button" class="btn btn-primary name" name="Katharine Viner" value="katharineviner">Katharine Viner</button>
+                                <button type="button" class="btn btn-primary name" name="Katy Balls" value="katyballs">Katy Balls</button>
+                                <button type="button" class="btn btn-primary name" name="Marina Hyde" value="marinahyde">Marina Hyde</button>
+                                <button type="button" class="btn btn-primary name" name="Martin Keetle" value="martinkeetle">Martin Keetle</button>
+                                <button type="button" class="btn btn-primary name name-red" name="Matthew D'Ancona" value="matthewdancona">Matthew D'Ancona</button>
+                                <button type="button" class="btn btn-primary name name-red" name="Mona Eltahawy" value="monaeltahawy">Mona Eltahawy</button>
+                                <button type="button" class="btn btn-primary name name-red" name="Nick Cohen" value="nickcohen">Nick Cohen</button>
+                                <button type="button" class="btn btn-primary name" name="Paul Mason" value="paulmason">Paul Mason</button>
+                                <button type="button" class="btn btn-primary name" name="Polly Toynbee" value="pollytoynbee">Polly Toynbee</button>
+                                <button type="button" class="btn btn-primary name" name="Rachel Clarke" value="rachelclarke">Rachel Clarke</button>
+                                <button type="button" class="btn btn-primary name" name="Rafael Behr" value="rafaelbehr">Rafael Behr</button>
+                                <button type="button" class="btn btn-primary name" name="Rhiannon Lucy Cosslett" value="rhiannonlucycosslett">Rhiannon Lucy Cosslett</button>
+                                <button type="button" class="btn btn-primary name name-red" name="Sam Wollaston" value="samwollaston">Sam Wollaston</button>
+                                <button type="button" class="btn btn-primary name" name="Simon Jenkins" value="simonjenkins">Simon Jenkins</button>
+                                <button type="button" class="btn btn-primary name name-red" name="Stuart Heritage" value="stuartheritage">Stuart Heritage</button>
+                                <button type="button" class="btn btn-primary name" name="Suzanne Moore" value="suzannemoore">Suzanne Moore</button>
+                                <button type="button" class="btn btn-primary name" name="Will Self" value="willself">Will Self</button>
+                                <button type="button" class="btn btn-primary name" name="Yasmin Alibhai-Brown" value="yasminalibhaibrown">Yasmin Alibhai-Brown</button>
+                                <button type="button" class="btn btn-primary name" name="Zoe Williams" value="zoewilliams">Zoe Williams</button>
+
+                            </div>
+                            <div class="btn-group btn-group-md">
+
+                                <p class="h4">The "Voice of the People"</p>
+                                <button type="button" class="btn btn-primary name" name="Greta Thunberg" value="gretathunberg">Greta Thunberg</button>
+                                <button type="button" class="btn btn-primary name" name="Harry &amp; Meghan" value="royal">Harry &amp; Meghan</button>
+                                <button type="button" class="btn btn-primary name" name="Stormzy" value="stormzy">Stormzy</button>
+                            </div>
+                            <div class="btn-group btn-group-md">
+
+                                <p class="h4">Brexit Crybabies</p>
+                                <button type="button" class="btn btn-primary name" name="AC Grayling" value="acgrayling">AC Grayling</button>
+                                <button type="button" class="btn btn-primary name" name="Anna Soubry" value="annasoubry">Anna Soubry</button>
+                                <button type="button" class="btn btn-primary name" name="Chuka Umunna" value="chukaumunna">Chuka Umunna</button>
+                                <button type="button" class="btn btn-primary name" name="Femi Oluwole" value="femioluwole">Femi Oluwole</button>
+                                <button type="button" class="btn btn-primary name" name="Gary Lineker" value="garylineker">Gary Lineker</button>
+                                <button type="button" class="btn btn-primary name" name="Gina Miller" value="ginamiller">Gina Miller</button>
+
+                                <button type="button" class="btn btn-primary name" name="Ian Blackford" value="ianblackford">Ian Blackford</button>
+                                <button type="button" class="btn btn-primary name" name="James O'Brien" value="jamesobrien">James O'Brien</button>
+                                <button type="button" class="btn btn-primary name" name="Jo Swinson" value="joswinson">Jo Swinson</button>
+                                <button type="button" class="btn btn-primary name" name="Kevin Maguire" value="kevinmaguire">Kevin Maguire</button>
+                                <button type="button" class="btn btn-primary name" name="Nish Kumar" value="nishkumar">Nish Kumar</button>
+                                <button type="button" class="btn btn-primary name" name="Ross Greer" value="rossgreer">Ross Greer</button>
+                                <button type="button" class="btn btn-primary name" name="Russell Brand" value="russellbrand">Russell Brand</button>
+
+                                <button type="button" class="btn btn-primary name" name="Shelagh Fogarty" value="shelaghfogarty">Shelagh Fogarty</button>
+
+                                <button type="button" class="btn btn-primary name" name="Terry Christian" value="terrychristian">Terry Christian</button>
+                                <button type="button" class="btn btn-primary name" name="Ursula von der Leyen" value="ursulavonderleyen">Ursula von der Leyen</button>
+
+                            </div>
+                            <div class="btn-group btn-group-md">
+
+                                <p class="h4">Labour</p>
+
+                                <button type="button" class="btn btn-primary name" name="Aaron Bastani" value="aaronbastani">Aaron Bastani</button>
+                                <button type="button" class="btn btn-primary name" name="Alastair Campbell" value="alastaircampbell">Alastair Campbell</button>
+                                <button type="button" class="btn btn-primary name" name="Andrew Adonis" value="andrewadonis">Andrew Adonis</button>
+                                <button type="button" class="btn btn-primary name" name="Andy Burnham" value="andyburnham">Andy Burnham</button>
+                                <button type="button" class="btn btn-primary name" name="Angela Rayner" value="angelarayner">Angela Rayner</button>
+                                <button type="button" class="btn btn-primary name" name="Chris Williamson" value="chriswilliamson">Chris Williamson</button>
+                                <button type="button" class="btn btn-primary name" name="David Lammy" value="davidlammy">David Lammy</button>
+                                <button type="button" class="btn btn-primary name" name="Dawn Butler" value="dawnbutler">Dawn Butler</button>
+                                <button type="button" class="btn btn-primary name" name="Diane Abbott" value="dianeabbott">Diane Abbott</button>
+                                <button type="button" class="btn btn-primary name" name="Eddie Izzard" value="eddieizzard">Eddie Izzard</button>
+                                <button type="button" class="btn btn-primary name" name="Emily Thornberry" value="emilythornberry">Emily Thornberry</button>
+                                <button type="button" class="btn btn-primary name" name="George Galloway" value="georgegalloway">George Galloway</button>
+                                <button type="button" class="btn btn-primary name" name="Fiona Onasanya" value="fionaonasanya">Fiona Onasanya</button>
+                                <button type="button" class="btn btn-primary name" name="Jeremy Corbyn" value="jeremycorbyn">Jeremy Corbyn</button>
+                                <button type="button" class="btn btn-primary name" name="Jess Phillips" value="jessphillips">Jess Phillips</button>
+                                <button type="button" class="btn btn-primary name" name="John McDonnell" value="johnmcdonnell">John McDonnell</button>
+                                <button type="button" class="btn btn-primary name" name="Ken Livingstone" value="kenlivingstone">Ken Livingstone</button>
+                                <button type="button" class="btn btn-primary name" name="Len McCluskey" value="lenmccluskey">Len McCluskey</button>
+                                <button type="button" class="btn btn-primary name" name="Naz Shah" value="nazshah">Naz Shah</button>
+                                <button type="button" class="btn btn-primary name" name="Rebecca Long-Bailey" value="rebeccalongbailey">Rebecca Long-Bailey</button>
+                                <button type="button" class="btn btn-primary name" name="Seumas Milne" value="seumasmilne">Seumas Milne</button>
+                                <button type="button" class="btn btn-primary name" name="Shami Chakrabarti" value="shamichakrabarti">Shami Chakrabarti</button>
+                                <button type="button" class="btn btn-primary name" name="Stella Creasy" value="stellacreasy">Stella Creasy</button>
+                                <button type="button" class="btn btn-primary name" name="Sadiq Khan" value="sadiqkhan">Sadiq Khan</button>
+                                <button type="button" class="btn btn-primary name" name="Yvette Cooper" value="yvettecooper">Yvette Cooper</button>
+                                <button type="button" class="btn btn-primary name" name="Zarah Sultana" value="zarahsultana">Zarah Sultana</button>
+                            </div>
+                            <div class="btn-group btn-group-md">
+                                <p class="h4">Communists, Terrorists &amp; LOLZ</p>
+                                <button type="button" class="btn btn-primary name" name="Ash Sarkar" value="ashsarkar">Ash Sarkar</button>
+                                <button type="button" class="btn btn-primary name" name="Caroline Lucas" value="carolinelucas">Caroline Lucas</button>
+                                <button type="button" class="btn btn-primary name" name="Clementine Ford" value="clementineford">Clementine Ford</button>
+                                <button type="button" class="btn btn-primary name" name="Gerry Adams" value="gerryadams">Gerry Adams</button>
+                                <button type="button" class="btn btn-primary name" name="Jared O'Mara" value="jaredomara">Jared O'Mara</button>
+                                <button type="button" class="btn btn-primary name" name="Laurie Penny" value="lauriepenny">Laurie Penny</button>
+                                <button type="button" class="btn btn-primary name" name="Justin Welby" value="justinwelby">Justin Welby</button>
+                                <button type="button" class="btn btn-primary name" name="Rory Stewart" value="rorystewart">Rory Stewart</button>
+                                <button type="button" class="btn btn-primary name name-red" name="Shamima Begum" value="shamimabegum">Shamima Begum</button>
+                            </div>
+                            <div class="btn-group btn-group-md">
+                                <p class="h4">Billionaire Beggers</p>
+                                <button type="button" class="btn btn-primary name" name="Bono" value="bono">Bono</button>
+                                <button type="button" class="btn btn-primary name" name="Lily Allen" value="lilyallen">Lily Allen</button>
+                            </div>
+
+                        </div>
+                        <div class="btn-group btn-group-md">
+                            <p class="h4">New Zealand's Dickheads</p>
+
+                            <button type="button" class="btn btn-primary name" name="Jacinda Ardern" value="jacindaardern">Jacinda Ardern</button>
+                            <button type="button" class="btn btn-primary name" name="Andrew Little" value="andrewlittle">Andrew Little</button>
+                            <button type="button" class="btn btn-primary name" name="Winston Peters" value="winstonpeters">Winston Peters</button>
+                            <button type="button" class="btn btn-primary name" name="Tova O'Brien" value="tovaobrien">Tova O'Brien</button>
+                            <button type="button" class="btn btn-primary name" name="Patrick Gower" value="patrickgower">Patrick Gower</button>
+                            <button type="button" class="btn btn-primary name" name="Alison Mau" value="alisonmau">Alison Mau</button>
+                        </div>
+
+                        <!--
+                                        <button type='button' class="btn btn-primary name" name="Jonathan Pie" value="jonathanpie">Jonathan Pie</button>
+                                        <button type='button' class="btn btn-primary name" name="Hillary Clinton" value="hillaryclinton">Hillary Clinton</button>
+                                        <button type='button' class="btn btn-primary name" name="Sauron" value="sauron">Sauron</button>
+                        -->
+                    </div>
+                </div>
+                <!-- end of Names row -->
+            </div>
+        </div>
+    </div>
+    <!-- End meme-control -->
+    <div class="col-xs-12 col-sm-12 text-center" id="footer">
+        <div class="debug"></div>
+        <div id="debugoutput"></div>
+    </div>
+    </div>
+    </div>
+
+</body>
+
+<script>
+    function exportCanvas() {
+
+        /* scroll to the top of the page */
+        window.scrollTo(0, 0);
+
+        /* hide the text border from the export */
+        $(".meme-txt-area").css('border', '0 none transparent');
+
+        html2canvas(document.querySelector("#meme-bg-target"), {
+            allowTaint: true,
+            useCORS: true
+        }).then(canvas => {
+
+                var ua = window.navigator.userAgent;
+                var iOS = !!ua.match(/iPad/i) || !!ua.match(/iPhone/i);
+                var webkit = !!ua.match(/WebKit/i);
+                var iOSSafari = iOS && webkit && !ua.match(/CriOS/i);
+
+                // ONLY for ios on safari, it sucks but not as much as Apple having this bug open for 5 years.
+                if (iOS) {
+
+                    // handle non-a[download] safari as best we can:
+                    if (confirm("Displaying New Document\n\nUse Save As... to download, then click back to return to this page.")) {
+                        lity(canvas.toDataURL());
+                    }
+
+                } else {
+                    if (!window.localStorage) {
+                        alert("This function is not supported by your browser.");
+                        return;
+                    }
+
+                    try {
+
+                        var c = canvas.toDataURL().replace("data:image/png;base64,", "");
+
+                        var blob = new Blob([b64toBlob(c)], {
+                            type: "image/png"
+                        });
+
+                        saveAs(blob, "guardianmeme.png");
+
+                    } catch (e) {
+                        alert("Your browser is configured to block the image being generated. Brave (with frintprint prevention) and Firefox Focus do this. Please try another browser")
+                    }
+
+
+
+                }
+
+                if ($('#hide[type=checkbox]').prop('checked') == false)
+                    $(".meme-txt-area").css('border', '2px red dotted');
+
+            }
+
+        );
+
+    }
+
+    function b64toBlob(b64Data, contentType, sliceSize) {
+        contentType = contentType || '';
+        sliceSize = sliceSize || 512;
+
+        var byteCharacters = atob(b64Data);
+        var byteArrays = [];
+
+        for (var offset = 0; offset < byteCharacters.length;
+
+            offset += sliceSize) {
+            var slice = byteCharacters.slice(offset, offset + sliceSize);
+
+            var byteNumbers = new Array(slice.length);
+            for (var i = 0; i < slice.length;
+
+                i++) {
+                byteNumbers[i] = slice.charCodeAt(i);
+            }
+
+            var byteArray = new Uint8Array(byteNumbers);
+
+            byteArrays.push(byteArray);
+        }
+
+        var blob = new Blob(byteArrays, {
+                type: contentType
+            }
+
+        );
+        return blob;
+    }
+
+    /**  
+     * detect IE
+     * returns version of IE or false, if browser is not Internet Explorer
+     */
+    function detectIE() {
+        var ua = window.navigator.userAgent;
+
+        // Test values; Uncomment to check result 
+
+        // IE 10
+        // ua = 'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2;
+        // Trident/6.0)';
+
+        // IE 11
+        // ua = 'Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv:11.0) like Gecko';
+
+        // Edge 12 (Spartan)
+        // ua = 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML,
+        // like Gecko) Chrome/39.0.2171.71 Safari/537.36 Edge/12.0';
+
+        // Edge 13    
+        // ua = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36  
+        // (KHTML, like Gecko) Chrome/46.0.2486.0 Safari/537.36 Edge/13.10586';
+
+        var msie = ua.indexOf('MSIE ');
+
+        if (msie > 0) {
+            // IE 10 or older => return version number
+            return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+        }
+
+        var trident = ua.indexOf('Trident/');
+
+        if (trident > 0) {
+            // IE 11 => return version number
+            var rv = ua.indexOf('rv:');
+            return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+        }
+
+        var edge = ua.indexOf('Edge/');
+
+        if (edge > 0) {
+            // Edge (IE 12+) => return version number
+            return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
+        }
+
+        // other browser
+        return false;
+    }
+
+
+    function rgb2hex(rgb) {
+        rgb = rgb.match(/^rgba?[\s+]?\([\s+]?(\d+)[\s+]?, [\s+]?(\d+)[\s+]?, [\s+]?(\d+)[\s+]?/i);
+        return (rgb && rgb.length === 4) ? "#" + ("0" + parseInt(rgb[1], 10).toString(16)).slice(-2) + ("0" + parseInt(rgb[2], 10).toString(16)).slice(-2) + ("0" + parseInt(rgb[3], 10).toString(16)).slice(-2) : '';
+    }
+
+
+    $(document).ready(function(e) {
+
+            $(".name").click(function() {
+                    $(".photo img").attr('src', 'images/mugshots/' + this.value + '.png');
+                    $(".photo img").attr('crossOrigin', 'Anonymous');
+                    $(".meme-name-area").text(this.name);
+                }
+
+            );
+
+            $("#save-as-image").on('click', function() {
+                exportCanvas();
+            });
+
+            // hide the guide lines
+            $("#hide").change(function() {
+                    if ($('#hide[type=checkbox]').prop('checked'))
+                        $(".meme-txt-area").css('border', '0 none transparent');
+                    else
+                        $(".meme-txt-area").css('border', '2px red dotted');
+                }
+
+            );
+
+            //    $(".meme-txt-area").draggable();
+            //    $(".meme-txt-area").focus();
+
+            // all editable content is text only
+            $("div[contenteditable=true]").off('paste').on('paste', function(e) {
+                    e.preventDefault();
+                    var text = e.originalEvent.clipboardData ? e.originalEvent.clipboardData.getData('text/plain') : window.clipboardData.getData('Text');
+                    _insertText(text);
+                }
+
+            );
+
+            function _insertText(text) {
+
+                // use insertText command if supported
+                if (document.queryCommandSupported('insertText')) {
+                    document.execCommand('insertText', false, text);
+                } else // or insert the text content at the caret's current position
+                // replacing eventually selected content
+                {
+                    var range = document.getSelection().getRangeAt(0);
+                    range.deleteContents();
+                    var textNode = document.createTextNode(text);
+                    range.insertNode(textNode);
+                    range.selectNodeContents(textNode);
+                    range.collapse(false);
+
+                    var selection = window.getSelection();
+                    selection.removeAllRanges();
+                    selection.addRange(range);
+                }
+            }
+
+            ;
+
+            // font size up/down
+            $('.qtyplus').click(function(e) {
+                    // Stop acting like a button
+                    e.preventDefault();
+                    // Get the field name
+                    var currentVal = parseInt($('.meme-txt-area').css("font-size").replace('px', ''));
+
+                    // If is not undefined
+                    if (!isNaN(currentVal)) {
+                        // change the css    
+                        currentVal++;
+                        $('.meme-txt-area').css("font-size", currentVal + 'px');
+                    }
+                }
+
+            );
+
+            // This button will decrement the value till 0
+            $(".qtyminus").click(function(e) {
+                    // Stop acting like a button
+                    e.preventDefault();
+                    // Get the field name
+                    var currentVal = parseInt($('.meme-txt-area').css("font-size").replace('px', ''));
+
+                    // If it isn't undefined or its greater than 0
+                    if (!isNaN(currentVal) && currentVal > 0) {
+                        // Decrement one
+                        currentVal--;
+                        $('.meme-txt-area').css("font-size", currentVal + 'px');
+                    } else {
+                        // Otherwise put a 0 there
+                        $('.meme-txt-area').css("font-size", '0px');
+                    }
+
+                    // change the css        
+                    $('.meme-txt-area').css("font-size", currentVal);
+
+                }
+
+            );
+
+            // if user clicks on the footer, then give some screen size details
+            $("#footer").click(function(e) {
+                    var bg = $(".debug").css('background-color');
+                    $("#debugoutput").text(rgb2hex(bg) + ' ' + document.body.clientWidth + 'x' + document.body.clientHeight);
+                }
+
+            );
+
+            // ie is shit - get IE or Edge browser version
+            var version = detectIE();
+
+            if (version != null && version != false && version < 15) {
+                $(".ie_warning").show();
+            }
+
+
+            $(".meme-txt-area").focus();
+
+        }
+
+    );
+</script>
+
+</html>
