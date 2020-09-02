@@ -1,0 +1,590 @@
+/* warnings */
+
+.ie_warning {
+    /*      visibility:hidden; */
+    display: none;
+}
+
+
+/* meme-bg-target */
+
+.wrap {
+    padding: 0;
+    margin: 10px;
+}
+
+.top-container {
+    clear: both;
+}
+
+.top-element {
+    /* min-height:120px; */
+}
+
+.bottom-container {
+    background-color: transparent;
+}
+
+.name-red {
+    background-color: #e07ab7 !important;
+    border-color: #e06da4 !important;
+}
+
+.bottom-element {
+    width: 100%;
+    padding-top: 5px;
+    background-color: transparent;
+}
+
+#meme-bg-target {
+    background-image: url("../images/template.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /*
+		background-colour:#a03030;
+		width:806px;
+		height:335px;
+		min-height:335px;
+*/
+    border: #CCC 1px solid;
+    margin: 20px 0px;
+    display: block;
+    position: relative;
+    /*min-height:330px;*/
+}
+
+.photo {
+    background: transparent;
+    padding: 0px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 264px;
+    height: 220px;
+}
+
+.photo img {
+    border: 0px;
+    width: 100%;
+}
+
+#meme-preview {
+    width: 100%;
+    height: 100%;
+    background: #FFF;
+    border: #CCC 1px solid;
+    margin: 0px;
+    position: relative;
+}
+
+.meme-txt-area {
+    border: #ff0000 2px dotted;
+    min-height: 80px;
+    max-height: 150px;
+    line-height: 1 !important;
+    color: #212121;
+    cursor: move;
+    font-size: 48px;
+    line-height: 2.625rem;
+    font-family: 'GH Guardian Headline', Georgia, serif;
+    font-weight: normal;
+    font-feature-settings: "liga" 0;
+    -webkit-font-smoothing: antialiased;
+    clear: both;
+    width: 100%;
+    background: transparent;
+    overflow: hidden;
+    padding-left: 0px;
+    padding-top: 0px;
+}
+
+.meme-name-area {
+    border: none;
+    padding: 20px;
+    padding-top: 5px;
+    color: #e05e01;
+    cursor: move;
+    font-style: italic;
+    font-size: 48px;
+    line-height: 2.625rem;
+    font-feature-settings: "liga" 0;
+    font-family: 'GH Guardian Headline', Georgia, serif;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+}
+
+.meme-txt-area:focus {
+    /*      outline: none; */
+}
+
+div#meme-canvas-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.debug {
+    visibility: hidden;
+}
+
+.label-preview {
+    color: #333;
+    margin: 20px 0px 10px;
+}
+
+.download-container {
+    margin-top: 35px;
+}
+
+[contenteditable=true]:empty::before {
+    content: attr(placeholder);
+    color: #888;
+}
+
+[placeholder]:empty::before {
+    content: attr(placeholder);
+    color: #888;
+}
+
+[placeholder]:empty:focus::after {
+    content: "";
+}
+
+[placeholder]:empty:focus::before {
+    content: "";
+}
+
+
+/* End meme-bg-target */
+
+
+/* Button font sizes */
+
+@media (max-width: 768px) {
+    .btn-primary {
+        margin: 3px 3px 3px 3px;
+        font-size: 3vw;
+    }
+}
+
+@media (min-width: 769px) {
+    .btn-primary {
+        margin: 3px 3px 3px 3px;
+        font-size: 16px !important;
+    }
+}
+
+
+/* Smartphones (landscape) ----------- */
+
+@media only screen and (max-width: 321px) {
+    /* Styles */
+    /*        body {
+             background-color:#a02020; 
+        }
+		.debug {
+			 background-color:#e02020;
+		}
+        .photo{
+                height:auto;
+                width:270px;
+        }
+        #meme-bg-target{
+                width:806px;
+                height:335px;
+                max-height:335px;
+                position:relative;
+        }
+        .meme-name-area {
+                padding: 5px;
+                font-size:48px;
+        }
+        .meme-txt-area{
+                min-height:120px;
+                max-height:240px;
+                font-size:48px;
+        }
+*/
+}
+
+
+/* Smartphones (portrait and landscape) ----------- */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 370px) {
+    /* Styles 
+        iphone portrait - DONE
+        iphone 5/SE
+*/
+    body {
+        /*              background-color:pink; */
+    }
+    .debug {
+        background-color: pink;
+    }
+    .photo {
+        height: auto;
+        width: 90px;
+    }
+    #meme-bg-target {
+        width: 280px;
+        height: 116px;
+        min-height: 116px;
+        position: relative;
+    }
+    .meme-name-area {
+        padding: 0px;
+        font-size: 16px;
+    }
+    .meme-txt-area {
+        min-height: 36px;
+        max-height: 60px;
+        font-size: 16px;
+    }
+}
+
+
+/* iphone 6/7/8 (portrait and landscape) ----------- */
+
+@media only screen and (min-device-width: 370px) and (max-device-width: 400px) {
+    /* Styles - DONE */
+    body {
+        /*                background-color:orange;  */
+    }
+    .debug {
+        background-color: orange;
+    }
+    .photo {
+        height: auto;
+        width: 116px;
+    }
+    #meme-bg-target {
+        width: 330px;
+        height: 150px;
+        max-height: 150px;
+        position: relative;
+    }
+    .meme-name-area {
+        padding: 0px;
+        font-size: 19px;
+    }
+    .meme-txt-area {
+        min-height: 45px;
+        max-height: 92px;
+        font-size: 19px;
+    }
+}
+
+@media only screen and (min-device-width: 400px) and (max-device-width: 480px) {
+    /* Styles - DONE*/
+    body {
+        /*              background-color:#e000f0; */
+    }
+    .debug {
+        background-color: #e000f0;
+    }
+    .photo {
+        height: auto;
+        width: 116px;
+    }
+    #meme-bg-target {
+        width: 360px;
+        height: 150px;
+        max-height: 150px;
+        position: relative;
+    }
+    .meme-name-area {
+        padding: 0px;
+        font-size: 19px;
+    }
+    .meme-txt-area {
+        min-height: 45px;
+        max-height: 92px;
+        font-size: 19px;
+    }
+}
+
+@media only screen and (min-device-width: 480px) and (max-device-width: 600px) and (orientation: landscape) {
+    /* iphone 4 landscape - ewwww */
+    body {
+        /*              background-color:#124578;  */
+    }
+    .debug {
+        background-color: #124578;
+    }
+    .photo {
+        height: auto;
+        width: 171px;
+    }
+    #meme-bg-target {
+        width: 460px;
+        height: 191px;
+        max-height: 191px;
+        position: relative;
+    }
+    .meme-name-area {
+        padding: 5px;
+        font-size: 27px;
+    }
+    .meme-txt-area {
+        min-height: 60px;
+        max-height: 120px;
+        font-size: 27px;
+    }
+}
+
+@media only screen and (min-device-width: 480px) and (max-device-width: 600px) and (orientation: portrait) {
+    /* iphone 4 landscape - ewwww DONE */
+    /*        body {    background-color:#e01010;  }
+*/
+    .debug {
+        background-color: #e01010;
+    }
+    .photo {
+        height: auto;
+        width: 161px;
+    }
+    #meme-bg-target {
+        width: 460px;
+        height: 191px;
+        max-height: 191px;
+        position: relative;
+    }
+    .meme-name-area {
+        padding: 5px;
+        font-size: 27px;
+    }
+    .meme-txt-area {
+        min-height: 60px;
+        max-height: 120px;
+        font-size: 27px;
+    }
+}
+
+
+/* 
+samsung galaxy tab 2 7.0 - DONE
+*/
+
+@media only screen and (min-device-width: 600px) and (max-device-width: 768px) {
+    body {
+        /*              background-color:#987623; */
+    }
+    .debug {
+        background-color: #987623;
+    }
+    .photo {
+        height: auto;
+        width: 203px;
+    }
+    #meme-bg-target {
+        width: 600px;
+        height: 249px;
+        max-height: 249px;
+        position: relative;
+    }
+    .meme-name-area {
+        padding: 5px;
+        font-size: 35px;
+    }
+    .meme-txt-area {
+        min-height: 80px;
+        max-height: 150px;
+        font-size: 35px;
+    }
+}
+
+
+/* iPads (portrait and landscape) -----------  */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    body {
+        /*              background-color:cyan;  */
+    }
+    .debug {
+        background-color: cyan;
+    }
+    .photo {
+        height: auto;
+        width: 268px;
+    }
+    #meme-bg-target {
+        width: 720px;
+        height: 316px;
+        max-height: 316px;
+        position: relative;
+    }
+    .meme-name-area {
+        padding: 5px;
+        font-size: 40px;
+    }
+    .meme-txt-area {
+        min-height: 120px;
+        max-height: 210px;
+        font-size: 40px;
+    }
+}
+
+
+/* iPads (landscape) -----------  */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+    /* Styles */
+    body {
+        /*              background-color:green;  */
+    }
+    .debug {
+        background-color: green;
+    }
+    .photo {
+        height: auto;
+        width: 240px;
+    }
+    #meme-bg-target {
+        width: 720px;
+        height: 316px;
+        max-height: 316px;
+        position: relative;
+    }
+    .meme-txt-area {
+        min-height: 120px;
+        max-height: 210px;
+        font-size: 40px;
+    }
+    .meme-name-area {
+        padding: 5px;
+        font-size: 40px;
+    }
+}
+
+
+/* iPads (portrait) -----------  (shrunk) iPad Mini -  */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 900px) and (orientation: portrait) {
+    body {
+        /*              background-color:#90a0b0;  */
+    }
+    .debug {
+        background-color: #90a0b0;
+    }
+    .photo {
+        height: auto;
+        width: 250px;
+    }
+    #meme-bg-target {
+        width: 720px;
+        height: 316px;
+        max-height: 316px;
+        position: relative;
+    }
+    .meme-txt-area {
+        min-height: 120px;
+        max-height: 210px;
+        font-size: 40px;
+    }
+    .meme-name-area {
+        font-size: 40px;
+    }
+}
+
+
+/* iPads (portrait) -----------  (shrunk) iPad Pro - DONE */
+
+@media only screen and (min-device-width: 900px) and (max-device-width: 1024px) and (orientation: portrait) {
+    body {
+        /*              background-color:orange; */
+    }
+    .debug {
+        background-color: orange;
+    }
+    .photo {
+        height: auto;
+        width: 270px;
+    }
+    #meme-bg-target {
+        width: 806px;
+        height: 335px;
+        max-height: 335px;
+        position: relative;
+    }
+    .meme-name-area {
+        padding: 5px;
+        font-size: 48px;
+    }
+    .meme-txt-area {
+        min-height: 120px;
+        max-height: 240px;
+        font-size: 48px;
+    }
+}
+
+
+/* Desktops and laptops ----------- */
+
+@media only screen and (min-width: 1024px) {
+    /* Styles */
+    body {
+        /*             background-color:blue;  */
+    }
+    .debug {
+        background-color: blue;
+    }
+    .photo {
+        height: auto;
+        width: 270px;
+    }
+    #meme-bg-target {
+        width: 806px;
+        height: 335px;
+        max-height: 335px;
+        position: relative;
+    }
+    .meme-name-area {
+        padding: 5px;
+        font-size: 48px;
+    }
+    .meme-txt-area {
+        min-height: 120px;
+        max-height: 240px;
+        font-size: 48px;
+    }
+}
+
+
+/* get a decent phone! */
+
+@media only screen and (min-device-width: 280px) and (max-device-width: 479px) and (orientation: portrait) {
+    /* iphone 4 landscape - ewwww DONE */
+    /*        body { background-color:#e01010; }
+*/
+    .debug {
+        background-color: #e01010;
+    }
+    .photo {
+        height: auto;
+        width: 161px;
+    }
+    #meme-bg-target {
+        width: 460px;
+        height: 191px;
+        max-height: 191px;
+        position: relative;
+    }
+    .meme-name-area {
+        padding: 5px;
+        font-size: 27px;
+    }
+    .meme-txt-area {
+        min-height: 60px;
+        max-height: 120px;
+        font-size: 27px;
+    }
+}
+
+
+/* iPhone 4 ----------- */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+    /* Styles */
+}

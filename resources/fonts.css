@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'GH Guardian Headline';
+    src: url('fonts/GHGuardianHeadline-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GH Guardian Headline';
+    src: url('fonts/GHGuardianHeadline-LightItalic.woff2') format('woff2');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'GH Guardian Headline';
+    src: url('fonts/GHGuardianHeadline-RegularItalic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: italic;
+}
