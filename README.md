@@ -17,6 +17,6 @@ Source code originally from: https://web.archive.org/web/20200723185948/https://
 
 ## STOP PRESS January 2023
 
-A certain anonymous donor has provided most of the missing pictures, and there were a few left that I just bodged up myself with images found via Google.
+A certain anonymous donor has provided most of the missing pictures, and there were a few left which I just bodged up myself with images found via Google.
 
-So thank you very much to our anonymous benefactor, and may the headlining continue merrily upon it’s way… 😀
+So a huge “thank you very much!” to our anonymous benefactor, and may the headlining continue merrily upon its way… 😀
