@@ -45,11 +45,11 @@ Electron allows webpages to be deivered as apps on Mac, Windows, Linux, and a bu
 
 So these are links to headline generator packaged as an Electron app:
 
-Mac: https://www.dropbox.com/scl/fi/4dol3ucf8eqxf0exrk25t/Guardian-Meme-Generator.zip?rlkey=a7wg96l5x9kcn19ecvthetk5b&st=wm92dwr2&dl=1
+Mac: ~~dead link~~
 
-Windows: https://www.dropbox.com/scl/fi/8pedi5vdx4ud7l6qcz228/Guardian-Meme-Generator.zip?rlkey=oftw9zxrngj18dsbkk1d5sg1v&st=tfkleg9z&dl=1
+Windows: ~~dead link~~
 
-Linux: https://www.dropbox.com/scl/fi/z6b7t2sdfstcwf4gdkusu/Guardian-Meme-Generator.zip?rlkey=6qztdkmlhvo4o339ld999xheb&st=zzpvj2n3&dl=1
+Linux: ~~dead link~~
 
 I've tested the apps on my Mac (running Catalina, so hopefully okay on more recent versions of MacOS), Windows 11, and the latest version of Ubuntu.
 
@@ -59,7 +59,7 @@ The Windows and Linux versions are directories which contain the Electron execut
 
 So, there we have it. Whilst I still think it's best that you figure out how to just open the web page directly in your own browser and use it that way (or even just host in on a local web server or your own private space somewhere), if you really want, you've now got this extra options that might or might not be of some help.
 
-
+As of August 2025, check out [Releases]() for the downloadable Electron binaries (macOS, Windows, Ubunutu)
 
 
 
