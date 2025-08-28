@@ -35,7 +35,7 @@ So a huge “thank you very much!” to our anonymous benefactor, and may the he
 
 This is a link for just the source files and web page in a zipped archive:
 
-~~dead link~~ Go to [Releases](https://github.com/charlierobin/guardian/releases) for ZIP archive of the source code for download
+~~dead link~~ (Go to [Releases](https://github.com/charlierobin/guardian/releases) for ZIP archive of the source code for download)
 
 Although the site opens and works okay on my Mac using Safari, it can be a bit tricky to get going on other browsers/platforms, mainly due to security considerations (CORS etc).
 
