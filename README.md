@@ -59,7 +59,7 @@ The Windows and Linux versions are directories which contain the Electron execut
 
 So, there we have it. Whilst I still think it's best that you figure out how to just open the web page directly in your own browser and use it that way (or even just host in on a local web server or your own private space somewhere), if you really want, you've now got this extra options that might or might not be of some help.
 
-As of August 2025, check out [Releases]() for the downloadable Electron binaries (macOS, Windows, Ubunutu)
+As of August 2025, check out [Releases](https://github.com/charlierobin/guardian/releases) for the downloadable Electron binaries (macOS, Windows, Ubunutu)
 
 
 
