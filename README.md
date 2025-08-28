@@ -45,11 +45,11 @@ Electron allows webpages to be deivered as apps on Mac, Windows, Linux, and a bu
 
 So these are links to headline generator packaged as an Electron app:
 
-Mac: ~~dead link~~
+Mac: ~~dead link~~ (Check out [Releases](https://github.com/charlierobin/guardian/releases))
 
-Windows: ~~dead link~~
+Windows: ~~dead link~~ (Check out [Releases](https://github.com/charlierobin/guardian/releases))
 
-Linux: ~~dead link~~
+Linux: ~~dead link~~ (Check out [Releases](https://github.com/charlierobin/guardian/releases))
 
 I've tested the apps on my Mac (running Catalina, so hopefully okay on more recent versions of MacOS), Windows 11, and the latest version of Ubuntu.
 
